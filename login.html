@@ -6,11 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大事件登录</title>
-
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
 </head>
 
 <body>
-
+    <!-- 顶部 -->
+    <div class="layui-main header">
+        <img src="/assets/images/logo.png" alt="">
+        <div class="regAndLogin">
+            <div class="title"></div>
+            <!-- 登录 -->
+            <div class="login_box">
+                <form class="layui-form" id="form_login">
+                    <!-- 用户名 -->
+                    <div class="layui-form-item">
+                        <!-- <label class="layui-form-label">输入框</label> -->
+                        <i class="layui-icon layui-icon-username"></i>
+                        <input type="text" name="username" required lay-verify="required" placeholder="请输入标题"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <!-- 密码 -->
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-loading-1"></i>
+                        <!-- <label class="layui-form-label">输入框</label> -->
+                        <input type="text" name="password" required lay-verify="required" lay-verify="required|pwd"
+                            placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                    <!-- 提交 -->
+                    <div class="layui-form-item ">
+                        <!-- lay-submit 属性必须存在，于后面submit事件绑定-->
+                        <button lay-submit class="layui-btn layui-btn-fluid  layui-btn-normal">立即登录</button>
+                    </div>
+                    <a href="JavaScript:;" class="link_reg links">去注册</a>
+                </form>
+            </div>
+            <!-- 注册 -->
+            <div class="reg_box" style="display: none;">
+                <form class="layui-form" id="form_reg">
+                    <!-- 用户名 -->
+                    <div class="layui-form-item">
+                        <!-- <label class="layui-form-label">输入框</label> -->
+                        <i class="layui-icon layui-icon-username"></i>
+                        <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <!-- 密码 -->
+                    <div class="layui-form-item">
+                        <!-- <label class="layui-form-label">输入框</label> -->
+                        <i class="layui-icon layui-icon-loading-1"></i>
+                        <input type="text" name="password" required lay-verify="required" placeholder="密码"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <!-- 再次确认密码 -->
+                    <div class="layui-form-item">
+                        <!-- <label class="layui-form-label">输入框</label> -->
+                        <i class="layui-icon layui-icon-loading-1"></i>
+                        <input type="text" name="repassword" required lay-verify="required"
+                            lay-verify="required|pwd|repwd" placeholder="再次确认密码" autocomplete="off" class="layui-input">
+                    </div>
+                    <!-- 提交 -->
+                    <div class="layui-form-item ">
+                        <!-- lay-submit 属性必须存在，于后面submit事件绑定-->
+                        <button lay-submit class="layui-btn layui-btn-fluid  layui-btn-normal">立即注册</button>
+                    </div>
+                    <!-- <a href="JavaScript:;" class="link_reg links">去注册</a> -->
+                    <a href="JavaScript:;" class="link_login links">去登录</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/baseAPI.js"></script>
+    <script src="/assets/js/login.js"></script>
 </body>
 
 </html>
